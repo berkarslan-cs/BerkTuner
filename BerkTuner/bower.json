@@ -1,0 +1,33 @@
+{
+  "name": "asp.net",
+  "private": true,
+  "dependencies": {
+    "bootbox": "4.4.0",
+    "bootstrap": "3.3.7",
+    "jquery": "3.1.1",
+    "modernizr": "2.8.3",
+    "react": "15.4.2",
+    "respond": "1.4.2",
+    "signalr": "2.2.1"
+  },
+  "install": {
+    "path": {
+      "css": "Assets/vendors/{name}/css",
+      "eot": "Assets/vendors/{name}/fonts",
+      "svg": "Assets/vendors/{name}/fonts",
+      "ttf": "Assets/vendors/{name}/fonts",
+      "woff": "Assets/vendors/{name}/fonts",
+      "woff2": "Assets/vendors/{name}/fonts",
+      "js": "Assets/vendors/{name}/js"
+    },
+    "sources": {
+      "bootstrap": [
+        "lib/bootstrap/dist/css/bootstrap.css",
+        "lib/bootstrap/dist/js/bootstrap.js",
+        "lib/bootstrap/dist/fonts/*"
+      ],
+      "modernizr": "lib/modernizr/modernizr.js",
+      "react": [ "lib/react/react.js", "lib/react/react-dom.js", "lib/react/react.min.js", "lib/react/react-dom.min.js" ]
+    }
+  }
+}

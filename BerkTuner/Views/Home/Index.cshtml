@@ -1,0 +1,23 @@
+﻿@using BerkTuner.Infra.ActionLog
+@{
+    ViewBag.Title = "Home Page";
+    var lastLogIps = Html.Raw(Json.Encode(ViewBag.LastIPsAndActions));
+    var streamers = Html.Raw(Json.Encode(ViewBag.Streamers));
+    var volume = Html.Raw(Json.Encode(ViewBag.Volume));
+    var audioDeviceExists = Html.Raw(Json.Encode(ViewBag.AudioDeviceExists));
+}
+
+<aside></aside>
+
+<div class="infoList">
+    <div id="streamerListDiv"></div>
+    <div id="logListDiv"></div>
+</div>
+
+@section pageScripts{
+    <script>
+        ReactDOM.render(React.createElement(SoundLevelControls, { currentVolume: @volume, audioDeviceExists: @audioDeviceExists }), document.getElementsByTagName("aside")[0]);
+        ReactDOM.render(React.createElement(StreamerList, { data: @streamers }), document.getElementById("streamerListDiv"));
+        ReactDOM.render(React.createElement(LogList, { data: @lastLogIps }), document.getElementById("logListDiv"));
+    </script>
+}

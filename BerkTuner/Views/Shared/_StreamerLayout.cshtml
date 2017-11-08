@@ -1,0 +1,18 @@
+﻿@{
+    Layout = "_MainLayout.cshtml";
+    string version = ViewBag.Version;
+}
+@section head{
+    <link rel="stylesheet" href="~/Assets/bundles/css/streamer.min.css@(version)" />
+}
+<div id="info">
+    <a href="@Url.Action("Index", "Home", new { area = "" })"><h1>BerkTuner</h1></a>
+    <h2>Streamer</h2>
+    <canvas id="fft" height="50" width="256"></canvas>
+</div>
+<div id="loading">Loading . . .</div>
+@RenderBody()
+@section scripts{
+    <script src="~/Assets/bundles/js/streamer.min.js@(version)"></script>
+    @RenderSection("pageScripts", false)
+}

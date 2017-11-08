@@ -1,0 +1,14 @@
+﻿@{
+    Layout = "_MainLayout.cshtml";
+    string version = ViewBag.Version;
+}
+@section head{
+    <link rel="stylesheet" href="~/Assets/bundles/css/main.min.css" />
+}
+@RenderBody()
+@section scripts{
+    <script src="~/Assets/bundles/js/jquery.min.js@(version)"></script>
+    <script src="~/Assets/bundles/js/main.min.js@(version)"></script>
+    <script src="~/signalr/hubs"></script>
+    @RenderSection("pageScripts", false)
+}

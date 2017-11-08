@@ -1,0 +1,1 @@
+* When you open the project, node packages should be automatically installed. If it's stuck downloading or just it doesn't install, add your local nodejs installation directory (e.g. "C:\Program Files (x86)\nodejs") into "Options" -> "Projects and Solutions" -> "External Web Tools" on the top of the list. Or instead, just run "npm install" in the root project directory.

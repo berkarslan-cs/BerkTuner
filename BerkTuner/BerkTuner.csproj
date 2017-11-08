@@ -1,0 +1,336 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{A948855B-DCB8-4880-A677-062B0F01F4CB}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>BerkTuner</RootNamespace>
+    <AssemblyName>BerkTuner</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <MvcBuildViews>false</MvcBuildViews>
+    <UseIISExpress>false</UseIISExpress>
+    <IISExpressSSLPort />
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+    <UseGlobalApplicationHostFile />
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.AspNet.SignalR.Core, Version=2.2.1.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.SignalR.Core.2.2.1\lib\net45\Microsoft.AspNet.SignalR.Core.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.AspNet.SignalR.SystemWeb, Version=2.2.1.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.SignalR.SystemWeb.2.2.1\lib\net45\Microsoft.AspNet.SignalR.SystemWeb.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="Microsoft.Owin, Version=3.0.1.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Owin.3.0.1\lib\net45\Microsoft.Owin.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Host.SystemWeb, Version=3.0.1.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Owin.Host.SystemWeb.3.0.1\lib\net45\Microsoft.Owin.Host.SystemWeb.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Security, Version=3.0.1.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Owin.Security.3.0.1\lib\net45\Microsoft.Owin.Security.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="NAudio, Version=1.8.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\NAudio.1.8.0\lib\net35\NAudio.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="NAudio.Lame, Version=1.0.3.3048, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\NAudio.Lame.1.0.4\lib\net20\NAudio.Lame.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Newtonsoft.Json, Version=9.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.9.0.1\lib\net45\Newtonsoft.Json.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Owin, Version=1.0.0.0, Culture=neutral, PublicKeyToken=f0ebd12fd5e55cc5, processorArchitecture=MSIL">
+      <HintPath>..\packages\Owin.1.0\lib\net40\Owin.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="RouteJs, Version=2.1.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\RouteJs.Mvc5.2.1.0\lib\net45\RouteJs.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="RouteJs.Mvc5, Version=2.1.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\RouteJs.Mvc5.2.1.0\lib\net45\RouteJs.Mvc5.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Runtime.Caching" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Web.Abstractions" />
+    <Reference Include="System.Web.Routing" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="Microsoft.Web.Infrastructure, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.Web.Infrastructure.1.0.0.0\lib\net40\Microsoft.Web.Infrastructure.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Net.Http">
+    </Reference>
+    <Reference Include="System.Net.Http.WebRequest">
+    </Reference>
+    <Reference Include="System.Web.Helpers, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.3\lib\net45\System.Web.Helpers.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Mvc, Version=5.2.3.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.Mvc.5.2.3\lib\net45\System.Web.Mvc.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Razor, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.Razor.3.2.3\lib\net45\System.Web.Razor.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.3\lib\net45\System.Web.WebPages.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages.Deployment, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.3\lib\net45\System.Web.WebPages.Deployment.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages.Razor, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.3\lib\net45\System.Web.WebPages.Razor.dll</HintPath>
+    </Reference>
+    <Reference Include="WebActivatorEx, Version=2.0.0.0, Culture=neutral, PublicKeyToken=7b26dc2a43f6a0d4, processorArchitecture=MSIL">
+      <HintPath>..\packages\WebActivatorEx.2.2.0\lib\net40\WebActivatorEx.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="App_Start\FilterConfig.cs" />
+    <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="Controllers\BaseController.cs" />
+    <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Global.asax.cs">
+      <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="Hubs\TunerHub.cs" />
+    <Compile Include="Infra\ActionLog\ActionLogManager.cs" />
+    <Compile Include="Infra\ActionLog\ActionLog.cs" />
+    <Compile Include="Infra\Core\Constants.cs" />
+    <Compile Include="Infra\Helpers\HttpContextHelper.cs" />
+    <Compile Include="Infra\Helpers\NAudioHelper.cs" />
+    <Compile Include="Infra\Streamer\NAudioStreamer.cs" />
+    <Compile Include="Infra\Streamer\Streamer.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Startup.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Assets\bundles\css\main.min.css" />
+    <Content Include="Assets\bundles\css\streamer.min.css" />
+    <Content Include="Assets\bundles\fonts\glyphicons-halflings-regular.svg" />
+    <Content Include="Assets\bundles\fonts\League_Gothic-webfont.svg" />
+    <Content Include="Assets\bundles\images\particle_blue.png" />
+    <Content Include="Assets\bundles\images\particle_green.png" />
+    <Content Include="Assets\bundles\images\particle_orange.png" />
+    <Content Include="Assets\bundles\images\particle_pink.png" />
+    <Content Include="Assets\bundles\images\particle_white.png" />
+    <Content Include="Assets\bundles\images\particle_yellow.png" />
+    <Content Include="Assets\bundles\images\soundmanager2.swf" />
+    <Content Include="Assets\bundles\js\jquery.min.js" />
+    <Content Include="Assets\bundles\js\main.min.js" />
+    <Content Include="Assets\bundles\js\react-dom.min.js" />
+    <Content Include="Assets\bundles\js\react.jsx.min.js" />
+    <Content Include="Assets\bundles\js\react.min.js" />
+    <Content Include="Assets\bundles\js\soundmanager2.js" />
+    <Content Include="Assets\bundles\js\streamer.min.js" />
+    <Content Include="Assets\resources\css\site.css" />
+    <Content Include="Assets\resources\images\favicon.ico" />
+    <Content Include="Assets\resources\js\core\tuner.js" />
+    <Content Include="Assets\resources\js\react\transpiled\Assets\resources\js\react\components\common\Button.js" />
+    <Content Include="Assets\resources\js\react\transpiled\Assets\resources\js\react\components\common\Constants.js" />
+    <Content Include="Assets\resources\js\react\transpiled\Assets\resources\js\react\components\core\Log.js" />
+    <Content Include="Assets\resources\js\react\transpiled\Assets\resources\js\react\components\core\LogList.js" />
+    <Content Include="Assets\resources\js\react\transpiled\Assets\resources\js\react\components\core\SoundLevelControls.js" />
+    <Content Include="Assets\resources\js\react\transpiled\Assets\resources\js\react\components\core\Streamer.js" />
+    <Content Include="Assets\resources\js\react\transpiled\Assets\resources\js\react\components\core\StreamerList.js" />
+    <Content Include="Assets\vendors\dancer\css\dancer.css" />
+    <Content Include="Assets\vendors\bootbox.js\js\bootbox.js" />
+    <Content Include="Assets\vendors\bootstrap\css\bootstrap.css" />
+    <Content Include="Assets\vendors\bootstrap\js\bootstrap.js" />
+    <Content Include="Assets\vendors\dancer\fonts\League_Gothic-webfont.svg" />
+    <Content Include="Assets\vendors\dancer\images\particle_blue.png" />
+    <Content Include="Assets\vendors\dancer\images\particle_green.png" />
+    <Content Include="Assets\vendors\dancer\images\particle_orange.png" />
+    <Content Include="Assets\vendors\dancer\images\particle_pink.png" />
+    <Content Include="Assets\vendors\dancer\images\particle_white.png" />
+    <Content Include="Assets\vendors\dancer\images\particle_yellow.png" />
+    <Content Include="Assets\vendors\dancer\js\adapterFlash.js" />
+    <Content Include="Assets\vendors\dancer\js\adapterMoz.js" />
+    <Content Include="Assets\vendors\dancer\js\adapterWebAudio.js" />
+    <Content Include="Assets\vendors\jquery\js\jquery.js" />
+    <Content Include="Assets\vendors\modernizr\js\modernizr.js" />
+    <Content Include="Assets\vendors\react\js\react-dom.js" />
+    <Content Include="Assets\vendors\react\js\react.js" />
+    <Content Include="Assets\vendors\respond\js\respond.src.js" />
+    <Content Include="Assets\vendors\signalr\js\jquery.signalR.js" />
+    <Content Include="Global.asax" />
+    <Content Include="Assets\vendors\dancer\fonts\League_Gothic-webfont.eot" />
+    <Content Include="Assets\vendors\dancer\fonts\League_Gothic-webfont.ttf" />
+    <Content Include="Assets\vendors\dancer\fonts\League_Gothic-webfont.woff" />
+    <Content Include="bower.json" />
+    <None Include=".bowerrc">
+      <DependentUpon>bower.json</DependentUpon>
+    </None>
+    <Content Include="Assets\vendors\bootstrap\fonts\glyphicons-halflings-regular.eot" />
+    <Content Include="Assets\vendors\bootstrap\fonts\glyphicons-halflings-regular.svg" />
+    <Content Include="Assets\vendors\bootstrap\fonts\glyphicons-halflings-regular.ttf" />
+    <Content Include="Assets\vendors\bootstrap\fonts\glyphicons-halflings-regular.woff" />
+    <Content Include="Assets\vendors\bootstrap\fonts\glyphicons-halflings-regular.woff2" />
+    <Content Include="Assets\resources\js\react\components\common\Button.jsx" />
+    <Content Include="Assets\resources\js\react\components\common\Constants.jsx" />
+    <Content Include="Assets\resources\js\react\components\core\Log.jsx" />
+    <Content Include="Assets\resources\js\react\components\core\LogList.jsx" />
+    <Content Include="Assets\resources\js\react\components\core\SoundLevelControls.jsx" />
+    <Content Include="Assets\resources\js\react\components\core\Streamer.jsx" />
+    <Content Include="Assets\resources\js\react\components\core\StreamerList.jsx" />
+    <Content Include="Assets\bundles\fonts\glyphicons-halflings-regular.eot" />
+    <Content Include="Assets\bundles\fonts\glyphicons-halflings-regular.ttf" />
+    <Content Include="Assets\bundles\fonts\glyphicons-halflings-regular.woff" />
+    <Content Include="Assets\bundles\fonts\glyphicons-halflings-regular.woff2" />
+    <Content Include="Assets\bundles\fonts\League_Gothic-webfont.eot" />
+    <Content Include="Assets\bundles\fonts\League_Gothic-webfont.ttf" />
+    <Content Include="Assets\bundles\fonts\League_Gothic-webfont.woff" />
+    <Content Include="Assets\bundles\maps\css\main.min.css.map" />
+    <Content Include="Assets\bundles\maps\css\streamer.min.css.map" />
+    <Content Include="Assets\bundles\maps\js\jquery.min.js.map" />
+    <Content Include="Assets\bundles\maps\js\main.min.js.map" />
+    <Content Include="Assets\bundles\maps\js\react.jsx.min.js.map" />
+    <Content Include="Assets\bundles\maps\js\streamer.min.js.map" />
+    <None Include="libmp3lame.32.dll">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="libmp3lame.64.dll">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <Content Include="gulpfile.js" />
+    <Content Include="package.json" />
+    <None Include="Properties\PublishProfiles\Local.pubxml" />
+    <None Include="Properties\PublishProfiles\Remote.pubxml" />
+    <Content Include="Assets\vendors\dancer\js\dancer.fft.js" />
+    <Content Include="Assets\vendors\dancer\js\dancer.js" />
+    <Content Include="Assets\vendors\dancer\js\Detector.js" />
+    <Content Include="Assets\vendors\dancer\js\fft.js" />
+    <Content Include="Assets\vendors\dancer\js\flash_detect.js" />
+    <Content Include="Assets\vendors\dancer\js\kick.js" />
+    <Content Include="Assets\vendors\dancer\js\player.js" />
+    <Content Include="Assets\vendors\dancer\js\scene.js" />
+    <Content Include="Assets\vendors\dancer\js\soundmanager2.js" />
+    <Content Include="Assets\vendors\dancer\images\soundmanager2.swf" />
+    <Content Include="Assets\vendors\dancer\js\Stats.js" />
+    <Content Include="Assets\vendors\dancer\js\support.js" />
+    <Content Include="Assets\vendors\dancer\js\Three.js" />
+    <Content Include="Assets\_references.js" />
+    <Content Include="README.txt" />
+    <Content Include="Web.config">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+    <Content Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+    <Content Include="Views\Web.config">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="Views\_ViewStart.cshtml" />
+    <Content Include="Views\Shared\Error.cshtml" />
+    <Content Include="Views\Shared\_Layout.cshtml" />
+    <Content Include="Views\Home\Index.cshtml" />
+    <Content Include="Views\Home\Streamer.cshtml" />
+    <Content Include="Views\Shared\_StreamerLayout.cshtml" />
+    <Content Include="Views\Shared\_MainLayout.cshtml" />
+  </ItemGroup>
+  <ItemGroup />
+  <ItemGroup>
+    <Content Include="packages.config">
+      <SubType>Designer</SubType>
+    </Content>
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <Target Name="MvcBuildViews" AfterTargets="AfterBuild" Condition="'$(MvcBuildViews)'=='true'">
+    <AspNetCompiler VirtualPath="temp" PhysicalPath="$(WebProjectOutputDir)" />
+  </Target>
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>False</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>47927</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>http://localhost:47927/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it.
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target> -->
+</Project>

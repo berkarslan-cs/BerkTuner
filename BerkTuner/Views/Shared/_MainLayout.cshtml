@@ -1,0 +1,32 @@
+﻿@{ 
+    string version = ViewBag.Version;
+}
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <link rel="icon" href="@Url.Content("~/Assets/resources/images/favicon.ico")" />
+    <title>BerkTuner</title>
+    @RenderSection("head", true)
+</head>
+<body>
+    @RenderBody()
+    <script src="@RouteJs.RouteJsHandler.HandlerUrl"></script>
+    <script src="~/Assets/bundles/js/react.min.js@(version)"></script>
+    <script src="~/Assets/bundles/js/react-dom.min.js@(version)"></script>
+    <script src="~/Assets/bundles/js/react.jsx.min.js@(version)"></script>
+    @RenderSection("scripts", true)
+    <div class="loader" style="display:none;"></div>
+    <div class="overlay" style="display:none;"></div>
+    @if (Constants.IsDebug)
+    {
+        <script id="__bs_script__">
+            //<![CDATA[
+            document.write("<script async src='http://HOST:3030/browser-sync/browser-sync-client.js?v=2.18.7'><\/script>".replace("HOST", location.hostname));
+            //]]>
+        </script>
+    }
+</body>
+</html>
